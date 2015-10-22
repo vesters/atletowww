@@ -1,5 +1,5 @@
 /* =================================
-   LOADER                     
+   LOADER
 =================================== */
 // makes sure the whole site is loaded
 jQuery(window).load(function() {
@@ -23,17 +23,17 @@ $(".video-container").fitVids();
 
 $('.mailchimp').ajaxChimp({
     callback: mailchimpCallback,
-    url: "http://webdesign7.us6.list-manage.com/subscribe/post?u=9445a2e155b82208d73433060&amp;id=16dc80e353" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
+    url: "http://webdesign7.us6.list-manage.com/subscribe/post?u=9445a2e155b82208d73433060&amp;id=16dc80e353" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
 });
 
 function mailchimpCallback(resp) {
      if (resp.result === 'success') {
         $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).fadeIn(1000);
         $('.subscription-error').fadeOut(500);
-        
+
     } else if(resp.result === 'error') {
         $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).fadeIn(1000);
-    }  
+    }
 }
 
 /* =================================
@@ -46,7 +46,7 @@ $(document).ready(function() {
     filter: ':not(.external)',
     changeHash: true
   });
-  
+
 });
 
 
@@ -102,15 +102,15 @@ jQuery(function( $ ){
 ===  VIDEO BACKGROUND           ====
 =================================== */
 if (matchMedia('(min-width: 640px)').matches) {
-   
+
    $(document).ready(function() {
     var videobackground = new $.backgroundVideo($('body'), {
       "align": "centerXY",
-      "width": 1280,
-      "height": 720,
+      "width": 960,
+      "height": 540,
       "path": "video/",
       "filename": "video",
-      "types": ["mp4","ogg","webm"]
+      "types": ["mp4","ogv","webm"]
     });
   });
 
@@ -122,8 +122,8 @@ if (matchMedia('(min-width: 640px)').matches) {
 =================================== */
 function alturaMaxima() {
   var altura = $(window).height();
-  $(".full-screen").css('min-height',altura); 
-  
+  $(".full-screen").css('min-height',altura);
+
 }
 
 $(document).ready(function() {
@@ -162,6 +162,15 @@ wow.init();
 ===  OWL CROUSEL               ====
 =================================== */
 $(document).ready(function () {
+
+    $("#intro-statements").owlCarousel({
+
+        navigation: false, // Show next and prev buttons
+        slideSpeed: 800,
+        paginationSpeed: 400,
+        autoPlay: 5000,
+        singleItem: true
+    });
 
     $("#feedbacks").owlCarousel({
 
@@ -281,8 +290,8 @@ $('.expand-form').simpleexpand({
 /* =================================
 ===  STELLAR                    ====
 =================================== */
-$(window).stellar({ 
-horizontalScrolling: false 
+$(window).stellar({
+horizontalScrolling: false
 });
 
 

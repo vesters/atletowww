@@ -1,0 +1,116 @@
+/* --------------------------------------
+=========================================
+COLOR : ATLETO
+
+    color: #d7df23;
+MAIN COLOR CODE: #d7df23
+
+DEEP COLOR CODE: #005885
+=========================================
+----------------------------------------- */
+
+a {
+  color: #000;
+}
+
+.color-overlay {
+     background: rgba(0, 0, 0, 0.55);
+   /* background: url(../patterns/06.png); */
+}
+
+.standard-button {
+    color: #d7df23;
+    background: #d7df23;
+}
+
+.standard-button2 {
+    color: #d7df23;
+    background: #d7df23;
+}
+
+.standard-button2:hover {
+    background: #005885;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background: #005885;
+    border-color: inherit;
+}
+
+.colored-line,
+.colored-line-left {
+    color: #d7df23;
+    background: #d7df23;
+}
+
+.main-color {
+    color: #d7df23;
+}
+
+.color-bg {
+    color: #d7df23;
+	background: #d7df23;
+	color: #FFFFFF;
+}
+
+.features .feature:hover .icon-container .icon {
+    color: #d7df23;
+    background: #d7df23;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #d7df23;
+    -webkit-box-shadow: 0px 0px 0px 2px #d7df23;
+    color: #d7df23;
+            box-shadow: 0px 0px 0px 2px #d7df23;
+}
+
+.features .feature .icon-container .icon {
+    color: #d7df23;
+    border: 1px solid #d7df23;
+    color: #d7df23;
+    color: #d7df23;
+}
+
+.feature-list li i {
+    color: #d7df23;
+    color: #d7df23;
+}
+
+.services .single-service .service-icon,
+.services .single-service h3 {
+    color: #d7df23;
+    color: #d7df23;
+}
+
+.screenshots .owl-theme .owl-controls .owl-page span {
+    color: #d7df23;
+    background: #d7df23;
+}
+
+footer .contact-button {
+    color: #d7df23;
+    border: 2px solid #d7df23;
+    color: #d7df23;
+    color: #d7df23;
+}
+
+footer .contact-button:hover {
+    color: #d7df23;
+    background: #d7df23;
+}
+
+footer .contact-box .expanded-contact-form .input-box:active,
+footer .contact-box .expanded-contact-form .textarea-box:active,
+footer .contact-box .expanded-contact-form .input-box:focus,
+footer .contact-box .expanded-contact-form .textarea-box:focus {
+    color: #d7df23;
+    border: 1px solid #d7df23;
+}
+
+footer .social-icons li a:hover {
+    color: #d7df23;
+    color: #d7df23;
+}
