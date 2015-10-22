@@ -292,9 +292,14 @@ h5 {
   font-weight: 300;
 }
 
+.heading-separator h2.solo {
+  padding: 15px 0 20px;
+}
+
 .heading-separator.bright h2 {
   padding-bottom: 5px;
 }
+
 
 .heading-separator p {
   color: #d7df23;
@@ -533,6 +538,14 @@ header .intro-statement .hashtag {
 #brief2 {
   background: url(../images/bg-1.jpg) no-repeat center fixed;
   background-size: cover;
+}
+
+/*---------------------------------------
+   SECTION:  TESTIMONIALS
+-----------------------------------------*/
+.testimonials {
+  min-height: 745px; /*TEMP*/
+  background: rgb(250, 251, 241) url(../images/testimonials-bg.jpg) no-repeat bottom left;
 }
 
 /*---------------------------------------
