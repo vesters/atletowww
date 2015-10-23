@@ -81,6 +81,19 @@ li {
     list-style: none;
 }
 
+.row.no-padding {
+  margin-left: 0;
+  margin-right: 0;
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.row.no-padding div[class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
 /* PRE LOADER */
 .preloader {
@@ -308,6 +321,10 @@ h5 {
 .arrow {
   background: url(../images/arrow-down-black.png) no-repeat center top;
   height: 38px;
+}
+
+.arrow.white {
+  background: url(../images/arrow-down-white.png) no-repeat center top;
 }
 
 .arrow.bright {
@@ -544,7 +561,7 @@ header .intro-statement .hashtag {
    SECTION:  TESTIMONIALS
 -----------------------------------------*/
 .testimonials {
-  min-height: 745px; /*TEMP*/
+  min-height: 785px;
   background: rgb(250, 251, 241) url(../images/testimonials-bg.jpg) no-repeat bottom left;
 }
 
@@ -625,44 +642,48 @@ object {
 /*---------------------------------------
    SECTION:  TESTIMONIALS
 -----------------------------------------*/
-.testimonials {
-    color: #ffffff;
+.testimonials {}
+
+.testimonials h4 {
+  font-weight: 500;
 }
 
-.testimonials .color-overlay {
+/*.testimonials .color-overlay {
     padding-top: 110px;
     padding-bottom: 110px;
-}
+}*/
 
-.testimonials .feedback {
+/*.testimonials .feedback {
     max-width: 750px;
     margin: auto;
-}
+}*/
 
 .testimonials .feedback .image {
-    font-size: 24px;
+    width: 266px;
+    height: 547px;
+    margin: 20px auto;
+    background: url(../images/screenshot-choose-your-sport.png);
+/*    font-size: 24px;
     border: 2px solid transparent;
     -webkit-box-shadow: 0px 0px 0px 2px #ffffff;
             box-shadow: 0px 0px 0px 2px #ffffff;
     border-radius: 50%;
-    width: 80px;
     height: 80px;
     line-height: 80px;
-    margin: auto;
     margin-top: 5px;
-    overflow: hidden;
+    overflow: hidden;*/
 }
 
 .testimonials .feedback .image img {
-    width: 100%;
+    width: 241px;
+    margin: 56px auto 0 auto;
     vertical-align: top;
 }
 
 .testimonials .feedback .message {
     font-size: 18px;
     font-style: italic;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin: 15px auto;
 }
 
 .testimonials .feedback .name {
@@ -674,17 +695,115 @@ object {
     font-size: 12px;
 }
 
+.testimonials .owl-controls {
+  margin: -340px auto;
+  width: 560px;
+}
+
+.testimonials .owl-theme .owl-controls .owl-buttons {
+  overflow: hidden;
+}
+
+.testimonials .owl-theme .owl-controls .owl-buttons div {
+  width: 49px;
+  height: 91px;
+}
+
+.testimonials .owl-theme .owl-controls .owl-buttons div.owl-prev {
+  float: left;
+  background: url(../images/slider-arrow-left.png)
+}
+
+.testimonials .owl-theme .owl-controls .owl-buttons div.owl-next {
+  float: right;
+  background: url(../images/slider-arrow-right.png)
+}
+
 /*.testimonials .owl-theme .owl-controls .owl-page span {
     background: #ffffff;
     border-radius: 50%;
 }*/
-
+/*
 .testimonials .customNavigation a {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
             user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*/
+
+/*---------------------------------------
+   SECTION:  TEAM
+-----------------------------------------*/
+.team {
+  color: #fff;
+  background: url(../images/bg-2.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+.team .row.list div[class*="col-"] {
+  margin-right: 38px;  /*!important*/
+}
+
+.team .image {
+  margin: 20px auto;
+}
+
+.team h2 {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.team .name {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.team p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+
+/*---------------------------------------
+   SECTION:  PARTNERSHIPS
+-----------------------------------------*/
+.partnerships {
+  min-height: 415px;
+  background: rgb(252, 253, 248) url(../images/partnerships-bg.jpg) no-repeat bottom right;
+}
+
+/*---------------------------------------
+   SECTION:  CONTACT
+-----------------------------------------*/
+
+.contact {
+  padding: 75px 0;
+  color: #fff;
+}
+
+.contact a,
+.contact a:hover,
+.contact a:visited {
+  display: block;
+  color: #fff;
+  margin-left: 102px;
+  margin-top: 50px;
+}
+
+.contact .logo {
+  margin-top: 55px;
+}
+
+.contact .icon {
+  float: left;
+  margin-top: 25px;
+}
+
+.contact .address {
+  margin-top: 10px;
+  margin-left: 102px;
 }
 
 
