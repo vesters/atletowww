@@ -7,6 +7,11 @@ jQuery(window).load(function() {
 	jQuery(".status").fadeOut();
         // will fade out the whole DIV that covers the website.
 	jQuery(".preloader").delay(1000).fadeOut("slow");
+
+  //UGLY HACK TO NOT USE BROKEN FUNC IN CHOME UP TO 46
+  if (navigator.userAgent.match(/Chrome\/4[0-6]/)) {
+    jQuery("section.about, section.team").css({backgroundAttachment: 'scroll'});
+  }
 });
 
 /* =================================
