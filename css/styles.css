@@ -583,7 +583,8 @@ header .intro-statement .hashtag {
    SECTION:  FEATURES
 -----------------------------------------*/
 .features {
-  background-color: rgb(250, 251, 241);
+  background-color: rgb(252, 253, 248);
+  /*background-color: #fff;*/
   overflow: hidden;
   min-height: 785px;
 }
