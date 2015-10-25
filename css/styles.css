@@ -447,7 +447,7 @@ header #intro-statements {
   background: rgba(0, 0, 0, 0.55);
   margin-top: 185px;
   margin-bottom: 185px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 }
 
 
@@ -519,6 +519,15 @@ header .intro-statement .hashtag {
   color: red;
 }
 
+.signup #subscribe-button {
+  width: 100%;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  background: url(../images/btn-sign-bg.png) repeat-y top right;
+  border: 0;
+}
+
 /*---------------------------------------
    SECTION:  THEFUTURE
 -----------------------------------------*/
@@ -526,6 +535,7 @@ header .intro-statement .hashtag {
 .about {
   background: url(../images/bg-1.jpg) no-repeat center fixed;
   background-size: cover;
+  position: relative;
 }
 
 .about .container {
@@ -539,9 +549,14 @@ header .intro-statement .hashtag {
 }
 
 .about p,
-.about li {
+.about li,
+.about strong {
   color: #fff;
   font-weight: 500;
+}
+
+.about strong {
+  font-weight: bold;
 }
 
 .about ul {
@@ -554,7 +569,13 @@ header .intro-statement .hashtag {
 }
 
 .about li span {
-  margin-left: -15px;
+  margin-left: -10px;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+  .about li {
+    text-align: left;
+  }
 }
 
 
@@ -642,6 +663,13 @@ header .intro-statement .hashtag {
   background: url(../images/slider-arrow-right.png)
 }
 
+@media (min-width: 320px) and (max-width: 640px) {
+ .features .owl-controls {
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 /*---------------------------------------
    SECTION:  BRIEF
 -----------------------------------------*/
@@ -811,6 +839,16 @@ object {
   margin-left: 102px;
 }
 
+@media (min-width: 320px) and (max-width: 640px) {
+
+  .contact .color-overlay {
+    padding-top: 20px;
+  }
+
+  .contact .logo {
+    margin-top: 0;
+  }
+}
 
 /*---------------------------------------
    SECTION:  SERVICES
@@ -968,7 +1006,7 @@ object {
 /*---------------------------------------
    SECTION:  FOOTER
 -----------------------------------------*/
-footer {
+/*footer {
     background: #FFFFFF;
 }
 
@@ -1048,4 +1086,4 @@ footer .copyright {
     color: #808080;
     padding-top: 10px;
     margin-bottom: 50px;
-}
+}*/

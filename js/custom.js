@@ -116,7 +116,7 @@ if (matchMedia('(min-width: 640px)').matches) {
       "height": 540,
       "path": "video/",
       "filename": "video",
-      "types": ["mp4","ogv","webm"]
+      "types": ["webm", "mp4","ogv"]
     });
   });
 
