@@ -8,7 +8,7 @@ jQuery(window).load(function() {
         // will fade out the whole DIV that covers the website.
 	jQuery(".preloader").delay(1000).fadeOut("slow");
 
-  jQuery("section.about").css('background', '#000');
+  // jQuery("section.about").css('background', '#000');
 });
 
 /* =================================
