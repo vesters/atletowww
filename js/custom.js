@@ -151,11 +151,11 @@ $('a.scrollto').bind('click.smoothscroll', function (event) {
 /* =================================
 ===  WOW ANIMATION             ====
 =================================== */
-wow = new WOW(
-  {
-    mobile: false
-  });
-wow.init();
+// wow = new WOW(
+//   {
+//     mobile: false
+//   });
+// wow.init();
 
 
 /* =================================
@@ -163,35 +163,41 @@ wow.init();
 =================================== */
 $(document).ready(function () {
 
-    $("#intro-statements").owlCarousel({
+  $("#intro-statements .intro-carousel").owlCarousel({
 
-        navigation: false, // Show next and prev buttons
-        slideSpeed: 800,
-        paginationSpeed: 400,
-        autoPlay: 5000,
-        singleItem: true
-    });
+      navigation: false, // Show next and prev buttons
+      slideSpeed: 800,
+      paginationSpeed: 400,
+      autoPlay: 5000,
+      singleItem: true
+  });
 
-    $("#feedbacks").owlCarousel({
+  var bgIndex = 0;
+  var screensCount = 3
+  for(var i = 0; i < screensCount; i++) { // BG preload images
+    $('<img/>')[0].src = "images/testimonials-bg-"+i+".jpg";
+  }
+  $("#feedbacks").owlCarousel({
 
-        navigation: true, // Show next and prev buttons
-        navigationText: false, // Show next and prev buttons
-        slideSpeed: 800,
-        pagination: false,
-        // paginationSpeed: 400,
-        // autoPlay: 5000,
-        singleItem: true
-    });
+      navigation: true, // Show next and prev buttons
+      navigationText: false, // Show next and prev buttons
+      slideSpeed: 800,
+      pagination: false,
+      // paginationSpeed: 400,
+      // autoPlay: 5000,
+      singleItem: true,
 
-    var owl = $("#screenshots");
+  });
 
-    owl.owlCarousel({
-        items: 4, //10 items above 1000px browser width
-        itemsDesktop: [1000, 4], //5 items between 1000px and 901px
-        itemsDesktopSmall: [900, 2], // betweem 900px and 601px
-        itemsTablet: [600, 1], //2 items between 600 and 0
-        itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
-    });
+  var owl = $("#screenshots");
+
+  owl.owlCarousel({
+      items: 4, //10 items above 1000px browser width
+      itemsDesktop: [1000, 4], //5 items between 1000px and 901px
+      itemsDesktopSmall: [900, 2], // betweem 900px and 601px
+      itemsTablet: [600, 1], //2 items between 600 and 0
+      itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
+  });
 
 
 });

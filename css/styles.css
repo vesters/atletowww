@@ -397,13 +397,29 @@ header .full-screen {
     color: #000000;
 }
 
-.navbar-fixed-top .main-navigation li a.icon {
+.navbar-fixed-top .main-navigation li.icon a {
   font-size: 30px;
+  padding-right: 0;
+}
+
+.navbar-fixed-top .main-navigation li.icon a:hover,
+.navbar-fixed-top .main-navigation li.icon a:focus {
+  background: none;
+}
+
+.navbar-toggle {
+  background: #fff;
+  border: #333;
+  padding-top: 20px;
+}
+
+.icon-bar {
+  background-color: #000;
 }
 
 .navbar-inverse .navbar-toggle {
-border-color: #313131;
-background: #313131;
+  border-color: #d7df23;
+  background: #fff;
 }
 
 header .only-logo .navbar {
@@ -419,12 +435,14 @@ header .only-logo .navbar .navbar-header {
 
 
 header #intro-statements {
-  width: 760px;
+  /*width: 760px;*/
   border: 1px solid #fff;
   background: rgba(0, 0, 0, 0.55);
-  margin: 185px auto;
-  padding-bottom: 5px;
+  margin-top: 185px;
+  margin-bottom: 185px;
+  padding-bottom: 20px;
 }
+
 
 header .intro-statement {
   padding-top: 35px;
@@ -444,6 +462,20 @@ header .intro-statement .hashtag {
   font-size: 24px;
   font-weight: 200px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+  header #intro-statements {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    background: none;
+  }
+
+  header .color-overlay {
+    min-height: 0 !important;
+  }
+
 }
 
 /*---------------------------------------
@@ -562,7 +594,25 @@ header .intro-statement .hashtag {
 -----------------------------------------*/
 .testimonials {
   min-height: 785px;
-  background: rgb(250, 251, 241) url(../images/testimonials-bg.jpg) no-repeat bottom left;
+  background-color: rgb(250, 251, 241);
+  overflow: hidden
+}
+
+.feedback {
+  background-repeat: no-repeat;
+}
+.feedback.bg0 {
+  background-image: url(../images/testimonials-bg-0.jpg);
+  background-position: bottom left;
+}
+
+.feedback.bg1 {
+  background-image: url(../images/testimonials-bg-1.jpg);
+  background-position: bottom right;
+}
+.feedback.bg2 {
+  background-image: url(../images/testimonials-bg-2.jpg);
+  background-position: bottom left;
 }
 
 /*---------------------------------------
@@ -701,12 +751,12 @@ object {
 }
 
 .testimonials .owl-theme .owl-controls .owl-buttons {
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .testimonials .owl-theme .owl-controls .owl-buttons div {
-  width: 49px;
-  height: 91px;
+  width: 92px;
+  height: 92px;
 }
 
 .testimonials .owl-theme .owl-controls .owl-buttons div.owl-prev {
@@ -763,6 +813,7 @@ object {
 .team p {
   margin-top: 30px;
   margin-bottom: 50px;
+  line-height: 25px
 }
 
 
@@ -779,8 +830,11 @@ object {
 -----------------------------------------*/
 
 .contact {
-  padding: 75px 0;
   color: #fff;
+}
+
+.contact .color-overlay {
+  padding: 75px 0;
 }
 
 .contact a,
