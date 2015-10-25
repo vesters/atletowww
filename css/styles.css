@@ -666,7 +666,17 @@ header .intro-statement .hashtag {
 
 @media (min-width: 320px) and (max-width: 640px) {
  .features .owl-controls {
+    margin-top: -500px;
     width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 640px) {
+ .features .owl-controls {
+    margin-top: -500px;
+    width: 355px;
     margin-left: 10px;
     margin-right: 10px;
   }
