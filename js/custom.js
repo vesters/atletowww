@@ -7,7 +7,7 @@ jQuery(window).load(function() {
 	jQuery(".status").fadeOut();
         // will fade out the whole DIV that covers the website.
 	jQuery(".preloader").delay(1000).fadeOut("slow");
-})
+});
 
 /* =================================
 ===  RESPONSIVE VIDEO           ====
@@ -72,7 +72,8 @@ $(window).scroll(function () {
 if (matchMedia('(min-width: 992px), (max-width: 767px)').matches) {
   function mainNav() {
         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'});
+        if (top > 40)
+          $('.sticky-navigation').stop().animate({"top": '0'});
 
         else $('.sticky-navigation').stop().animate({"top": '-60'});
     }
@@ -117,35 +118,35 @@ if (matchMedia('(min-width: 640px)').matches) {
 }
 
 
-/* =================================
-===  FULL SCREEN HEADER         ====
-=================================== */
-function alturaMaxima() {
-  var altura = $(window).height();
-  $(".full-screen").css('min-height',altura);
+// /* =================================
+// ===  FULL SCREEN HEADER         ====
+// =================================== */
+// function alturaMaxima() {
+//   var altura = $(window).height();
+//   $(".full-screen").css('min-height',altura);
 
-}
+// }
 
-$(document).ready(function() {
-  alturaMaxima();
-  $(window).bind('resize', alturaMaxima);
-});
+// $(document).ready(function() {
+//   alturaMaxima();
+//   $(window).bind('resize', alturaMaxima);
+// });
 
 
 /* =================================
 ===  SMOOTH SCROLL             ====
 =================================== */
-var scrollAnimationTime = 1200,
-    scrollAnimation = 'easeInOutExpo';
-$('a.scrollto').bind('click.smoothscroll', function (event) {
-    event.preventDefault();
-    var target = this.hash;
-    $('html, body').stop().animate({
-        'scrollTop': $(target).offset().top
-    }, scrollAnimationTime, scrollAnimation, function () {
-        window.location.hash = target;
-    });
-});
+// var scrollAnimationTime = 1200,
+//     scrollAnimation = 'easeInOutExpo';
+// $('a.scrollto').bind('click.smoothscroll', function (event) {
+//     event.preventDefault();
+//     var target = this.hash;
+//     $('html, body').stop().animate({
+//         'scrollTop': $(target).offset().top
+//     }, scrollAnimationTime, scrollAnimation, function () {
+//         window.location.hash = target;
+//     });
+// });
 
 
 /* =================================
@@ -173,11 +174,11 @@ $(document).ready(function () {
   });
 
   var bgIndex = 0;
-  var screensCount = 3
+  var screensCount = 3;
   for(var i = 0; i < screensCount; i++) { // BG preload images
-    $('<img/>')[0].src = "images/testimonials-bg-"+i+".jpg";
+    $('<img/>')[0].src = "images/feature-bg-"+i+".jpg";
   }
-  $("#feedbacks").owlCarousel({
+  $("#features-list").owlCarousel({
 
       navigation: true, // Show next and prev buttons
       navigationText: false, // Show next and prev buttons

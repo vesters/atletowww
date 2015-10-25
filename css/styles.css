@@ -566,20 +566,20 @@ header .intro-statement .hashtag {
    SECTION:  THEFUTURE
 -----------------------------------------*/
 
-.the-future {}
+.about {}
 
-.the-future .container {
+.about .container {
   padding-top: 100px;
 }
 
-.the-future h4 {
+.about h4 {
   color: #fff;
   text-transform: uppercase;
   font-weight: 900;
 }
 
-.the-future p,
-.the-future li {
+.about p,
+.about li {
   color: #fff;
   font-weight: 500;
 }
@@ -590,29 +590,85 @@ header .intro-statement .hashtag {
 }
 
 /*---------------------------------------
-   SECTION:  TESTIMONIALS
+   SECTION:  FEATURES
 -----------------------------------------*/
-.testimonials {
+.features {
   min-height: 785px;
   background-color: rgb(250, 251, 241);
-  overflow: hidden
+  overflow: hidden;
 }
 
-.feedback {
+.features .feature {
   background-repeat: no-repeat;
 }
-.feedback.bg0 {
-  background-image: url(../images/testimonials-bg-0.jpg);
+.features .feature.bg0 {
+  background-image: url(../images/feature-bg-0.jpg);
   background-position: bottom left;
 }
 
-.feedback.bg1 {
-  background-image: url(../images/testimonials-bg-1.jpg);
+.features .feature.bg1 {
+  background-image: url(../images/feature-bg-1.jpg);
   background-position: bottom right;
 }
-.feedback.bg2 {
-  background-image: url(../images/testimonials-bg-2.jpg);
+.features .feature.bg2 {
+  background-image: url(../images/feature-bg-2.jpg);
   background-position: bottom left;
+}
+
+.features .feature h4 {
+  font-weight: 500;
+}
+
+.features .feature .image {
+    width: 266px;
+    height: 547px;
+    margin: 20px auto;
+    background: url(../images/screenshot-choose-your-sport.png);
+}
+
+.features .feature .image img {
+    width: 241px;
+    margin: 56px auto 0 auto;
+    vertical-align: top;
+}
+
+.features .feature .message {
+    font-size: 18px;
+    font-style: italic;
+    margin: 15px auto;
+}
+
+.features .feature .name {
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.features .feature .company-info {
+    font-size: 12px;
+}
+
+.features .owl-controls {
+  margin: -340px auto;
+  width: 560px;
+}
+
+.features .owl-theme .owl-controls .owl-buttons {
+  /*overflow: hidden;*/
+}
+
+.features .owl-theme .owl-controls .owl-buttons div {
+  width: 92px;
+  height: 92px;
+}
+
+.features .owl-theme .owl-controls .owl-buttons div.owl-prev {
+  float: left;
+  background: url(../images/slider-arrow-left.png)
+}
+
+.features .owl-theme .owl-controls .owl-buttons div.owl-next {
+  float: right;
+  background: url(../images/slider-arrow-right.png)
 }
 
 /*---------------------------------------
@@ -686,87 +742,6 @@ object {
 
 .video {
     background: transparent !important;
-}
-
-
-/*---------------------------------------
-   SECTION:  TESTIMONIALS
------------------------------------------*/
-.testimonials {}
-
-.testimonials h4 {
-  font-weight: 500;
-}
-
-/*.testimonials .color-overlay {
-    padding-top: 110px;
-    padding-bottom: 110px;
-}*/
-
-/*.testimonials .feedback {
-    max-width: 750px;
-    margin: auto;
-}*/
-
-.testimonials .feedback .image {
-    width: 266px;
-    height: 547px;
-    margin: 20px auto;
-    background: url(../images/screenshot-choose-your-sport.png);
-/*    font-size: 24px;
-    border: 2px solid transparent;
-    -webkit-box-shadow: 0px 0px 0px 2px #ffffff;
-            box-shadow: 0px 0px 0px 2px #ffffff;
-    border-radius: 50%;
-    height: 80px;
-    line-height: 80px;
-    margin-top: 5px;
-    overflow: hidden;*/
-}
-
-.testimonials .feedback .image img {
-    width: 241px;
-    margin: 56px auto 0 auto;
-    vertical-align: top;
-}
-
-.testimonials .feedback .message {
-    font-size: 18px;
-    font-style: italic;
-    margin: 15px auto;
-}
-
-.testimonials .feedback .name {
-    margin-top: 15px;
-    font-weight: 400;
-}
-
-.testimonials .feedback .company-info {
-    font-size: 12px;
-}
-
-.testimonials .owl-controls {
-  margin: -340px auto;
-  width: 560px;
-}
-
-.testimonials .owl-theme .owl-controls .owl-buttons {
-  /*overflow: hidden;*/
-}
-
-.testimonials .owl-theme .owl-controls .owl-buttons div {
-  width: 92px;
-  height: 92px;
-}
-
-.testimonials .owl-theme .owl-controls .owl-buttons div.owl-prev {
-  float: left;
-  background: url(../images/slider-arrow-left.png)
-}
-
-.testimonials .owl-theme .owl-controls .owl-buttons div.owl-next {
-  float: right;
-  background: url(../images/slider-arrow-right.png)
 }
 
 /*.testimonials .owl-theme .owl-controls .owl-page span {
