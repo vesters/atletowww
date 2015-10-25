@@ -832,6 +832,8 @@ object {
 .contact .icon {
   float: left;
   margin-top: 25px;
+  border-radius: 50%;
+  border: 2px solid #d7df23;
 }
 
 .contact .address {
