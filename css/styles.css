@@ -405,6 +405,12 @@ header .full-screen {
 .navbar-fixed-top .main-navigation li.icon a:hover,
 .navbar-fixed-top .main-navigation li.icon a:focus {
   background: none;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+       /*opacity: 1;*/
 }
 
 .navbar-toggle {
