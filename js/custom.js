@@ -214,7 +214,11 @@ $(document).ready(function () {
 =================================== */
 $(document).ready(function () {
 
-    $('#screenshots a').nivoLightbox({
+    // $('#screenshots a').nivoLightbox({
+    //     effect: 'fadeScale',
+    // });
+
+    $('.signup a').nivoLightbox({
         effect: 'fadeScale',
     });
 
