@@ -584,7 +584,7 @@ header .intro-statement .hashtag {
   font-weight: 500;
 }
 
-#brief2 {
+.about {
   background: url(../images/bg-1.jpg) no-repeat center fixed;
   background-size: cover;
 }

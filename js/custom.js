@@ -13,7 +13,7 @@ jQuery(window).load(function() {
 ===  RESPONSIVE VIDEO           ====
 =================================== */
 
-$(".video-container").fitVids();
+// $(".video-container").fitVids();
 
 
 
@@ -93,11 +93,11 @@ if (matchMedia('(min-width: 768px) and (max-width: 991px)').matches) {
 /* =================================
 ===  DOWNLOAD BUTTON CLICK SCROLL ==
 =================================== */
-jQuery(function( $ ){
-			$('#download-button').localScroll({
-				duration:1000
-			});
-		});
+// jQuery(function( $ ){
+// 			$('#download-button').localScroll({
+// 				duration:1000
+// 			});
+// 		});
 
 /* =================================
 ===  VIDEO BACKGROUND           ====
@@ -299,9 +299,9 @@ $('.expand-form').simpleexpand({
 /* =================================
 ===  STELLAR                    ====
 =================================== */
-$(window).stellar({
-horizontalScrolling: false
-});
+// $(window).stellar({
+// horizontalScrolling: false
+// });
 
 
 /* =================================
