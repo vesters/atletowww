@@ -23,16 +23,21 @@ jQuery(window).load(function() {
 
 $('.mailchimp').ajaxChimp({
     callback: mailchimpCallback,
-    url: "http://webdesign7.us6.list-manage.com/subscribe/post?u=9445a2e155b82208d73433060&amp;id=16dc80e353" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
+    // url: "http://webdesign7.us6.list-manage.com/subscribe/post?u=9445a2e155b82208d73433060&amp;id=16dc80e353" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
+    url: "http://atletosports.us12.list-manage.com/subscribe/post?u=1403dc7a0d3179f1da32aecca&amp;id=ac922c570c"
 });
 
 function mailchimpCallback(resp) {
      if (resp.result === 'success') {
-        $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).fadeIn(1000);
-        $('.subscription-error').fadeOut(500);
+        $('#signup-form').slideUp(1000);
+        $('.subscription-error').slideUp(1000); //fadeOut(500);
+
+        setTimeout(function() {
+          $('.subscription-success').html('<i class="icon_check_alt2 pull-left"></i><p>' + resp.msg + '</p>').slideDown();
+        }, 1000);
 
     } else if(resp.result === 'error') {
-        $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).fadeIn(1000);
+        $('.subscription-error').html('<i class="icon_close_alt2 pull-left"></i><p>' + resp.msg + '</p>').fadeIn(1000);
     }
 }
 

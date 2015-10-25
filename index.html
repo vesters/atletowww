@@ -218,44 +218,63 @@
     <!-- RIGHT SIDE WITH BRIEF -->
     <div class="col-md-6 text-left">
 
-      <img src="images/logo-good-sports.png">
+      <img src="images/A_icon_ng.png">
 
-      <!-- SECTION TITLE -->
-      <h4>For every signup, ATLETO will donate $1 to GoodSports</h4>
-
-      <!-- <div class="colored-line-left">
-      </div> -->
+      <h4>BRING YOUR A­GAME!</h4>
 
       <p>
-       -GoodSports is a non profit organisation working to lay the foundation for healthy, active lifestyles by providing athletic quipment to disadvantaged young people nationwide.
+        ATLETO will launch in two major cities in the US in the beginning of 2016.
       </p>
+      <p>
+        Make sure that your amongst the first to #sporttogether.
+      </p>
+
+      <p>
+        <strong>Sign up today and get notified as soon as ATLETO is ready for download in your area!</strong>
+      </p>
+
+      <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
+      <div class="subscription-success"></div>
+      <div class="subscription-error"></div>
 
       <!-- FORM -->
       <div class="row">
         <div class="col-md-6">
-          <form class="signup-form" id="signup-form" role="form">
+
+
+          <form id="signup-form" class="subscription-form mailchimp" role="form">
 
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Name">
+              <input name="MMERGE1" type="text" class="form-control" placeholder="Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Zip Code">
+              <input name="MMERGE2" type="text" class="form-control" placeholder="Zip Code">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="City">
+              <input  name="MMERGE3" type="text" class="form-control" placeholder="City">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Country">
+              <input name="MMERGE4" type="text" class="form-control" placeholder="Country">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" placeholder="E-mail">
+              <input name="email" type="email" class="form-control" placeholder="E-mail">
             </div>
-            <button type="submit" class="btn btn-default">Sign Up</button>
+
+            <!-- EMAIL INPUT BOX -->
+            <!-- <input type="email" name="email" id="subscriber-email" placeholder="Your Email" class="form-control input-box"> -->
+
+            <!-- SUBSCRIBE BUTTON -->
+            <button type="submit" id="subscribe-button">Subscribe</button>
+            <!--
+            <button type="submit" class="btn btn-default">Sign Up</button> -->
           </form>
-          <small>By signing up you agree to ATLETO's <a href="#">terms and conditions</a></small>
         </div>
       </div>
       <!-- /END FORM -->
+
+      <p>
+        <small><br>By signing up you agree to ATLETO's <a href="#"><strong><u>terms and conditions</u></strong></a></small>
+      </p>
     </div>
     <!-- /END RIGHT BRIEF -->
 
@@ -446,12 +465,7 @@
         <p>
           <em>Based in New York City.</em><br><br>
 
-          Background:<br>
-
-          15 years in Advertising.<br><br>
-
-          Tournament Director of The Danish Golf Federation,
-          Golf commentary at EUROSPORT.
+          Patrick plays golf, tennis & soccer ­ and has worked 15 years in advertising.
         </p>
       </div>
       <div class="col-md-2">
@@ -465,15 +479,7 @@
         <p>
           <em>Based in Copenhagen.</em><br><br>
 
-          Background:<br>
-
-          17 years in Investment Banking<br><br>
-
-          1999 – 2004 <br>
-          VP of ABN AMRO, NYC.<br>
-
-          2004 – 2007 <br>
-          Partner at ABG Sundal Collier Investment Bank, London .
+          Ulrik plays golf & tennis ­ has worked in investment banking and finance for 17 years.
         </p>
       </div>
       <div class="col-md-2">
@@ -487,12 +493,7 @@
         <p>
           <em>Based in Los Angeles.</em><br><br>
 
-          Background:<br>
-
-          17 years in Advertising<br><br>
-
-          2009– 2015 <br>
-          Partner and Creative Director (Copy) at Umwelt, advertising agency
+          Peter does running, windsurfing and skiing and has worked in advertising for 17 years.
         </p>
       </div>
       <div class="col-md-2">
@@ -506,12 +507,7 @@
         <p>
           <em>Based in Los Angeles.</em><br><br>
 
-          Background:<br>
-
-          10 years in Advertising<br><br>
-
-          2011 – 2015<br>
-          Creative Director (AD) & Partner at JMDY, advertising agency.
+          Nicolai does running, swimming & fitness and has worked in advertising for 10 years.
         </p>
       </div>
       <div class="col-md-2">
@@ -525,10 +521,7 @@
         <p>
           <em>Based in Los Angeles.</em><br><br>
 
-          Background:<br>
-
-          12 years in Digital Development<br><br>
-          2007 – 2015  CTO & Partner at RE: Digital Agency
+          Thomas does ultimate frisbee, skiing and running and has worked with digital development for 12 years.
         </p>
       </div>
     </div>
@@ -562,7 +555,15 @@
      CONTACT
 ============================== -->
 
-<section class="contact black-bg" id="contact">
+<div class="container-fluid" id="contact">
+  <div class="row heading-separator">
+    <h2 class="main-color solo">
+      Get in touch
+    </h2>
+  </div>
+</div>
+
+<section class="contact black-bg">
 
   <div class="color-overlay">
 
@@ -574,24 +575,27 @@
         </div>
         <div class="col-md-4 text-left">
           <img src="images/contact-vertical-separator.png" class="pull-right">
-          <img src="images/contact-icon-mail.png" class="icon">
+          <img src="images/contact-icon-mail.png?v1" class="icon">
           <a href="mailto:info@atletosports.com">info@atletosports.com</a>
         </div>
         <div class="col-md-4 text-left">
 
-          <img src="images/contact-icon-pointer.png" class="icon">
+
+
+
+          <img src="images/contact-icon-pin.png?v1" class="icon">
           <div class="address">
             <p>
-              <strong>ATLETO NEW YORK</strong>
-              520 Broadway, Santa Monica, CA 90210
+              <strong>ATLETO Los Angeles:</strong><br>
+              520 Broadway, 90401, Santa Monica, CA, USA
             </p>
             <p>
-              <strong>ATLETO LOS ANGELES</strong>
-              520 Broadway, Santa Monica, CA 90210
+              <strong>ATLETO New York:</strong><br>
+              59, W. 24th street, 10011 New York, NY, USA
             </p>
             <p>
-              <strong>ATLETO COPENHAGEN</strong>
-              520 Broadway, Santa Monica, CA 90210
+              <strong>ATLETO Copenhagen:</strong><br>
+              Drachmannsvej 18, 2930 Klampenborg, Denmark
             </p>
           </div>
         </div>
@@ -603,7 +607,7 @@
 
 <div class="container-fluid">
   <div class="row heading-separator bright">
-    ATLETO
+    COPYRIGHT © 2015 ATLETO APS. DENMARK ALL RIGHTS RESERVED
   </div>
 </div>
 

@@ -54,6 +54,7 @@ a {
 
 a:hover {
     text-decoration: none;
+    color: #d7df23
 }
 
 .btn:focus,
@@ -74,7 +75,7 @@ a:hover {
 
 ul,
 ol {
-    padding-left: 0 !important;
+    padding-left: 0; /*!important*/
 }
 
 li {
@@ -485,72 +486,6 @@ header .intro-statement .hashtag {
 }
 
 /*---------------------------------------
-   SECTION:  FEATURES
------------------------------------------*/
-
-.features {
-    padding-top: 80px;
-    padding-bottom: 30px;
-    background: #ffffff;
-}
-
-.features .features-left {
-    text-align: right;
-    margin-top: 26px;
-    margin-bottom: 80px;
-}
-
-.features .features-left .icon-container {
-    float: right;
-    margin-left: 20px;
-}
-
-.features .features-right {
-    text-align: left;
-    margin-top: 26px;
-    margin-bottom: 80px;
-}
-
-.features .features-right .icon-container {
-    float: left;
-    margin-right: 20px;
-}
-
-.features .feature {
-    margin-bottom: 40px;
-}
-
-.features .feature .icon-container {
-    display: block;
-    min-height: 120px;
-    margin-top: 5px;
-}
-
-.features .feature .icon-container .icon {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    line-height: 55px;
-    font-size: 18px;
-    text-align: center;
-    -webkit-transition: all ease-in 0.25s;
-            transition: all ease-in 0.25s;
-    -webkit-background-clip: padding-box;
-           -moz-background-clip: padding;
-            background-clip: padding-box;
-}
-
-.features .phone-image {
-    max-width: 250px;
-    margin: auto;
-    margin-bottom: 80px;
-}
-
-.features .phone-image img {
-    width: 100%;
-}
-
-/*---------------------------------------
    SECTION:  SIGNUP
 -----------------------------------------*/
 
@@ -568,11 +503,30 @@ header .intro-statement .hashtag {
   color: #000;
 }
 
+.signup .subscription-success,
+.signup .subscription-error {
+  display: none;
+  padding: 15px;
+  background-color: #d7df23;
+}
+
+.signup .subscription-success p,
+.signup .subscription-error p {
+  margin-left: 30px;
+}
+
+.signup .subscription-error {
+  color: red;
+}
+
 /*---------------------------------------
    SECTION:  THEFUTURE
 -----------------------------------------*/
 
-.about {}
+.about {
+  background: url(../images/bg-1.jpg) no-repeat center fixed;
+  background-size: cover;
+}
 
 .about .container {
   padding-top: 100px;
@@ -590,21 +544,31 @@ header .intro-statement .hashtag {
   font-weight: 500;
 }
 
-.about {
-  background: url(../images/bg-1.jpg) no-repeat center fixed;
-  background-size: cover;
+.about ul {
+  padding-left: 15px;
 }
+
+.about li {
+  color: #fff;
+  font-weight: 500;
+}
+
+.about li span {
+  margin-left: -15px;
+}
+
 
 /*---------------------------------------
    SECTION:  FEATURES
 -----------------------------------------*/
 .features {
-  min-height: 785px;
   background-color: rgb(250, 251, 241);
   overflow: hidden;
+  min-height: 785px;
 }
 
 .features .feature {
+  min-height: 785px;
   background-repeat: no-repeat;
 }
 .features .feature.bg0 {
@@ -654,8 +618,9 @@ header .intro-statement .hashtag {
 }
 
 .features .owl-controls {
-  margin: -340px auto;
+  margin: -450px auto;
   width: 560px;
+  position: relative; /*Fix blinks and unstability*/
 }
 
 .features .owl-theme .owl-controls .owl-buttons {
@@ -663,8 +628,8 @@ header .intro-statement .hashtag {
 }
 
 .features .owl-theme .owl-controls .owl-buttons div {
-  width: 92px;
-  height: 92px;
+  width: 99px;
+  height: 99px;
 }
 
 .features .owl-theme .owl-controls .owl-buttons div.owl-prev {
@@ -774,11 +739,16 @@ object {
 }
 
 .team .row.list div[class*="col-"] {
-  margin-right: 38px;  /*!important*/
+  margin-right: 3%;  /*!important*/
 }
 
 .team .image {
   margin: 20px auto;
+}
+
+.team .image img {
+  width: 100%;
+  max-width: 148px;
 }
 
 .team h2 {
@@ -953,7 +923,7 @@ object {
    SECTION:  DOWNLOAD
 -----------------------------------------*/
 
-.download {
+/*.download {
     color: #ffffff;
 }
 
@@ -993,7 +963,7 @@ object {
 
 .download h2 {
     margin-bottom: 30px;
-}
+}*/
 
 /*---------------------------------------
    SECTION:  FOOTER
