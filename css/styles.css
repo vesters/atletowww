@@ -116,13 +116,21 @@ li {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url(../images/loading.gif);
+    /*background-image: url(../images/loading.gif);*/
+    background-image: url(../images/a_logo.png);
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
             background-size: cover;
     margin: -20px 0 0 -20px;
+
+    animation: fadeIn 0.75s infinite alternate;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
 
 .owl-theme .owl-controls .owl-page span {
   border-radius: 50%;
