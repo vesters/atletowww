@@ -681,29 +681,26 @@ header .intro-statement .hashtag {
 
 @media (min-width: 320px) and (max-width: 640px) {
 
-  .features {
-    min-height: 940px;
-  }
-
-  .features .feature {
-    background-size: 100%;
-    min-height: 900px;
-  }
-
   .features .owl-controls {
     margin-top: -500px;
     width: 300px;
     margin-left: 10px;
     margin-right: 10px;
   }
+
+  .features .owl-theme .owl-controls .owl-buttons div {
+    width: 40px;
+    height: 40px;
+    background-size: 100% !important;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 640px) { /*iphone6*/
  .features .owl-controls {
     margin-top: -500px;
-    width: 355px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 370px;
+    margin-left: 3px;
+    margin-right: 5px;
   }
 }
 /*---------------------------------------
