@@ -536,6 +536,13 @@ header .intro-statement .hashtag {
   border: 0;
 }
 
+@media (min-width: 320px) and (max-width: 640px) {
+  .signup {
+    background: #f4f5ee;
+    padding-bottom: 50px;
+  }
+}
+
 /*---------------------------------------
    SECTION:  THEFUTURE
 -----------------------------------------*/
@@ -673,7 +680,17 @@ header .intro-statement .hashtag {
 }
 
 @media (min-width: 320px) and (max-width: 640px) {
- .features .owl-controls {
+
+  .features {
+    min-height: 940px;
+  }
+
+  .features .feature {
+    background-size: 100%;
+    min-height: 900px;
+  }
+
+  .features .owl-controls {
     margin-top: -500px;
     width: 300px;
     margin-left: 10px;
@@ -681,7 +698,7 @@ header .intro-statement .hashtag {
   }
 }
 
-@media (min-width: 375px) and (max-width: 640px) {
+@media (min-width: 375px) and (max-width: 640px) { /*iphone6*/
  .features .owl-controls {
     margin-top: -500px;
     width: 355px;
