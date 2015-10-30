@@ -502,6 +502,10 @@ header .intro-statement .hashtag {
   padding-bottom: 200px;
 }
 
+.signup > .container > .row {
+  padding-top: 30px;
+}
+
 .signup h4 {
   font-weight: bold;
 }
@@ -735,7 +739,7 @@ header .intro-statement .hashtag {
 .app-brief .left-align p {
     display: block;
     float: none;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
 
 .app-brief .left-align .feature-list {
