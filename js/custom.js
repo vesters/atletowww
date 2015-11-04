@@ -12,6 +12,50 @@ jQuery(window).load(function() {
   if (navigator.userAgent.match(/Chrome\/4[0-6]/)) {
     jQuery("section.about, section.team").css({backgroundAttachment: 'scroll'});
   }
+
+  // ***** SIGNUP MAGIC BY V
+  var hiddenInputs = $('input[name="ZIPCODE"][type="hidden"], input[name="CITY"][type="hidden"], input[name="COUNTRY"][type="hidden"]');
+  if (!matchMedia('only screen and (max-width: 480px)').matches) {
+    $.get("http://ipinfo.io/json", function(response) {
+      
+      fillOutLocation(response.postal, response.city, response.country);
+    });
+  } else {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(setLocationFrom);
+    }
+    hiddenInputs.prop('disabled', true)
+  }
+
+  function fillOutLocation(zipcode, city, country) {
+      $('input[name="ZIPCODE"]').val(zipcode);
+      $('input[name="CITY"]').val(city);
+      $('input[name="COUNTRY"]').val(country);
+
+      // Disable textfields if taken from IP geolocation + enable hidden
+      hiddenInputs.prop('disabled', false)
+      $('input[name="ZIPCODE"][type="text"], input[name="CITY"][type="text"], input[name="COUNTRY"][type="text"]').prop('disabled', true).hide();
+  }
+
+  function setLocationFrom(position) {
+    var zipcode, city, country = "";
+    $.get('http://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+position.coords.longitude+'&sensor=true', function(response) {
+      var searchAddressComponents = response.results[0].address_components;
+
+      $.each(searchAddressComponents, function() {
+        if(this.types[0] == "postal_code") {
+          zipcode = this.short_name;
+        }
+        if(this.types[0] == "locality") {
+          city = this.long_name;
+        }
+        if(this.types[0] == "country") {
+          country = this.long_name;
+        }                    
+      });
+      fillOutLocation(zipcode, city, country);
+    });
+  }
 });
 
 /* =================================
