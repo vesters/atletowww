@@ -199,7 +199,11 @@
 		},
 
 		scrollTo: function(target, callback) {
-			var offset = $(target).offset().top - 75; // Extra offset is ATLETO specific
+			var extraOffset = 75; 
+			if (target == "#signup") {
+				extraOffset = 0;
+			}
+			var offset = $(target).offset().top - extraOffset; // Extra offset is ATLETO specific
 
 			$('html, body').animate({
 				scrollTop: offset
