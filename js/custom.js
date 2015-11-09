@@ -56,7 +56,7 @@ jQuery(window).load(function() {
       fillOutLocation(zipcode, city, country);
     });
   }
-  
+
   new Awesomplete($('input[data-multiple]')[0], {
     filter: function(text, input) {
       return Awesomplete.FILTER_CONTAINS(text, input.match(/[^,]*$/)[0]);
@@ -91,6 +91,10 @@ function mailchimpCallback(resp) {
      if (resp.result === 'success') {
         $('#signup-form').slideUp(1000);
         $('.subscription-error').slideUp(1000); //fadeOut(500);
+
+        // CompleteRegistration
+        // Track when a registration form is completed (ex. complete subscription, sign up for a service)
+        fbq('track', 'CompleteRegistration');
 
         setTimeout(function() {
           $('.subscription-success').html('<i class="icon_check_alt2 pull-left"></i><p>' + resp.msg + '</p>').slideDown();
