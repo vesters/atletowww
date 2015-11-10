@@ -97,8 +97,13 @@ function mailchimpCallback(resp) {
         fbq('track', 'CompleteRegistration');
 
         setTimeout(function() {
-          $('.subscription-success').html('<i class="icon_check_alt2 pull-left"></i><p>' + resp.msg + '</p>').slideDown();
+          $('.subscription-success').slideDown(); //.html('<i class="icon_check_alt2 pull-left"></i><p>' + resp.msg + '</p>')
         }, 1000);
+
+        // Buzz out
+        setTimeout(function() {
+          $('.subscription-success .addthis_sharing_toolbox').addClass("hvr-buzz-out");
+        }, 3000);
 
     } else if(resp.result === 'error') {
         $('.subscription-error').html('<i class="icon_close_alt2 pull-left"></i><p>' + resp.msg + '</p>').fadeIn(1000);

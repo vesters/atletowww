@@ -1,4 +1,4 @@
-/* =======================================================================
+ =======================================================================
 Kane - Responsive App Landing Page 1.7
 ======================================================================= */
 
@@ -507,6 +507,7 @@ header .intro-statement .hashtag {
 .signup {
   background: rgb(250, 251, 241) url(../images/signup-bg.jpg) no-repeat bottom right;
   padding-bottom: 200px;
+  text-align: center;
 }
 
 .signup > .container > .row {
@@ -514,6 +515,8 @@ header .intro-statement .hashtag {
 }
 
 .signup h4 {
+  padding: 10px;
+  margin-top: 0;
   font-weight: bold;
 }
 
@@ -525,17 +528,31 @@ header .intro-statement .hashtag {
 .signup .subscription-success,
 .signup .subscription-error {
   display: none;
-  padding: 15px;
+  border: 1px solid #d7df23;
+  background: rgba(255, 255, 255, 0.5);
+  padding-bottom: 15px;
+}
+
+.signup .subscription-success h4,
+.signup .subscription-error h4 {
   background-color: #d7df23;
 }
 
-.signup .subscription-success p,
-.signup .subscription-error p {
-  margin-left: 30px;
+.signup .subscription-success .content,
+.signup .subscription-error .content {
+  padding: 15px;
+}
+
+.signup .subscription-success .content p,
+.signup .subscription-error .content p {
+  /*margin-left: 30px;*/
 }
 
 .signup .subscription-error {
+  background-color: #d7df23;
   color: red;
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
 .signup #subscribe-button {
@@ -1132,4 +1149,4 @@ footer .copyright {
     color: #808080;
     padding-top: 10px;
     margin-bottom: 50px;
-}*/
+}
