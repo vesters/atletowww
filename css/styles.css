@@ -535,7 +535,8 @@ header .intro-statement .hashtag {
 
 .signup .subscription-success h4,
 .signup .subscription-error h4 {
-  background-color: #d7df23;
+  background-color: #000;
+  color: #fff;
 }
 
 .signup .subscription-success .content,
