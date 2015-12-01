@@ -828,9 +828,9 @@ object {
   background-size: cover;
 }
 
-.team .row.list div[class*="col-"] {
-  margin-right: 3%;  /*!important*/
-}
+/*.team .row.list div[class*="col-"] {
+  margin-right: 3%;
+}*/
 
 .team .image {
   margin: 20px auto;
