@@ -28,7 +28,7 @@
   deviceAgent.match(/blackberry/i) || 
   deviceAgent.match(/bada/i));
 
-  var activityId = document.location.hash.replace("#", "");
+  var userId = document.location.hash.replace("#", "");
 
   if (isTouchDevice) {
     // If the user is still here, open the App Store
@@ -37,15 +37,15 @@
     //   window.location = "https://itunes.apple.com/appdir";
     // }, 50);
         //Do something touchy
-    if (activityId) {
-      window.location = "atleto://game/"+activityId;  
+    if (userId) {
+      window.location = "atleto://user/"+userId;  
     } else {
       alert("Can't find your activity on ATLETO");
     }
   } else {
       //Can't touch this
       //window.location = 'intent://view?id=123#Intent;package=my.app.id;scheme=myapp;launchFlags=268435456;end;';
-      window.location = 'download.html';
+      window.location = '/a/download.html';
   }
 
   </script>
