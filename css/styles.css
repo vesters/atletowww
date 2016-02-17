@@ -828,9 +828,11 @@ object {
   background-size: cover;
 }
 
-/*.team .row.list div[class*="col-"] {
-  margin-right: 3%;
-}*/
+@media screen and (min-width: 992px) {
+  .team .col-md-2.team-col {
+    width: 19.666667%;
+  }
+}
 
 .team .image {
   margin: 20px auto;
