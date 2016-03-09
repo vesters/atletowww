@@ -114,6 +114,20 @@ fbq('track', "PageView");</script>
 src="https://www.facebook.com/tr?id=1501723113379261&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
+
+<script type="text/javascript">
+  var docHash = document.location.hash.replace("#", "");
+  if (navigator.userAgent.toLowerCase().match(/iphone|ipod|ipad/) && typeof docHash != "undefined") {
+
+    var actionArray = docHash.split("&");
+    var action = actionArray[0].split("=")[1]
+    var id = actionArray[1].split("=")[1]
+    var actionName = (action === "u" ? "user" : "game")
+
+    window.location = "atleto://"+actionName+"/"+id;
+  }
+</script>
+
 </head>
 
 
