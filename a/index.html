@@ -10,44 +10,12 @@
   <body>
 
 
-    
+
   </body>
 
   <script type="text/javascript">
-  
-  var now = new Date().valueOf();
-  var deviceAgent = navigator.userAgent.toLowerCase();
-
-  var isTouchDevice = Modernizr.touch || 
-  (deviceAgent.match(/(iphone|ipod|ipad)/) ||
-  deviceAgent.match(/(android)/)  || 
-  deviceAgent.match(/(iemobile)/) || 
-  deviceAgent.match(/iphone/i) || 
-  deviceAgent.match(/ipad/i) || 
-  deviceAgent.match(/ipod/i) || 
-  deviceAgent.match(/blackberry/i) || 
-  deviceAgent.match(/bada/i));
-
-  var activityId = document.location.hash.replace("#", "");
-
-  if (isTouchDevice) {
-    // If the user is still here, open the App Store
-    // setTimeout(function () {
-    //   if (new Date().valueOf() - now > 100) return;
-    //   window.location = "https://itunes.apple.com/appdir";
-    // }, 50);
-        //Do something touchy
-    if (activityId) {
-      window.location = "atleto://game/"+activityId;  
-    } else {
-      alert("Can't find your activity on ATLETO");
-    }
-  } else {
-      //Can't touch this
-      //window.location = 'intent://view?id=123#Intent;package=my.app.id;scheme=myapp;launchFlags=268435456;end;';
-      window.location = 'download.html';
-  }
-
+    var activityId = document.location.hash.replace("#", "");
+    window.location.href = "/#action=a&id="+activityId;
   </script>
 
 </html>
