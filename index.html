@@ -124,7 +124,9 @@ src="https://www.facebook.com/tr?id=1501723113379261&ev=PageView&noscript=1"
     var id = actionArray[1].split("=")[1]
     var actionName = (action === "u" ? "user" : "game")
 
-    window.location = "atleto://"+actionName+"/"+id;
+    $(document).ready(function() {
+      window.location = "atleto://"+actionName+"/"+id;
+    });
   }
 </script>
 
