@@ -144,23 +144,6 @@ li {
    Typography
 -----------------------------------------*/
 
-/* FONT FACE LOADER */
-/*@font-face {
-    font-family: 'Lane';
-    src: url('../fonts/lanenar_Lane.eot');
-    src: url('../fonts/lanenar_Lane.eot?#iefix') format('embedded-opentype'), url('../fonts/lanenar_Lane.woff') format('woff'), url('../fonts/lanenar_Lane.ttf') format('truetype'), url('../fonts/lanenar_Lane.svg#Lane') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-
-    @font-face {
-        font-family: 'Lane';
-        src: url('../fonts/lanenar_Lane.svg#Lane') format('svg');
-    }
-}*/
-
 /* HEADINGS */
 
 h1,
@@ -233,21 +216,49 @@ h5 {
 -----------------------------------------*/
 
 .white-text {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .dark-text {
-    color: #272727;
+  color: #272727;
 }
 
 .white-bg {
-    background: #fff !important;
+  background: #fff !important;
 }
 
 .grey-bg {
-    background: #F7F8FA !important;
+  background: #F7F8FA !important;
 }
 
+.grey-text {
+  color: #F7F8FA !important;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+.strong {
+  font-weight: 900;
+}
+
+.small {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.padding {
+  padding: 10px;
+}
+
+.padding-2x {
+  padding: 20px;
+}
+
+.semi-transparent {
+  opacity: 0.85;    
+}
 
 /*---------------------------------------
    SECTIONS
@@ -297,9 +308,9 @@ h5 {
 }
 
 .heading-separator {
-  color: #fff;
   background: #000;
   padding: 5px 0;
+  overflow: hidden;
 }
 
 .heading-separator.bright {
@@ -307,11 +318,19 @@ h5 {
   background: #d7df23;
 }
 
+.heading-separator.semi-transparent {
+  color: #000;
+  background: #fff;
+  opacity: 0.75;
+}
+
 .heading-separator h2 {
-  text-transform: uppercase;
   font-size: 28px;
   line-height: 30px;
   font-weight: 300;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .heading-separator h2.solo {
@@ -322,9 +341,13 @@ h5 {
   padding-bottom: 5px;
 }
 
-
 .heading-separator p {
   color: #d7df23;
+}
+
+.top-bottom-border {
+  border-top: 1px solid #d7df23;
+  border-bottom: 1px solid #d7df23;
 }
 
 .arrow {
@@ -340,6 +363,10 @@ h5 {
   background: url(../images/arrow-down-bright.png) no-repeat center top;
 }
 
+.separator-line {
+  background: #d7df23;
+  height: 1px;
+}
 
 /*---------------------------------------
 =========================================
@@ -453,14 +480,14 @@ header #intro-statements {
   /*width: 760px;*/
   border: 1px solid #fff;
   background: rgba(0, 0, 0, 0.55);
-  margin-top: 185px;
-  margin-bottom: 185px;
-  padding-bottom: 5px;
+  margin-top: 130px;
+  margin-bottom: 120px;
+  padding: 0;
 }
 
 
 header .intro-statement {
-  padding-top: 35px;
+
 }
 
 header .intro-statement .message {
@@ -469,7 +496,12 @@ header .intro-statement .message {
   font-size: 40px;
   font-weight: 900;
   line-height: 50px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+header .intro-statement .appstore-logo {
+  width: 190px;
 }
 
 header .intro-statement .hashtag {
@@ -487,11 +519,110 @@ header .intro-statement .hashtag {
     background: none;
   }
 
+  header .intro-statement .message {
+    padding: 15px;
+  }
+
   header .color-overlay {
     min-height: 0 !important;
   }
 
 }
+
+/*---------------------------------------
+   SECTION:  CONCEPT
+-----------------------------------------*/
+.what {
+  background: url(../images/bg-1.jpg) no-repeat center fixed;
+  background-size: cover;  
+}
+
+@media (min-width: 992px) {
+
+  .what .list {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .what .col-md-3 {
+    width: 25%;
+  }
+
+  .what .col-md-3.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .what .padding {
+    padding-left: 15px;
+    padding-right: 15px;
+  }  
+
+  .what .what-md-image {
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .what .what-md-image img {
+    
+  }  
+}
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+  .what .what-md-image {
+    padding-bottom: 50px;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  
+  .what .list p {
+    min-height: 95px;
+  }
+
+}
+
+/* Large Devices, Wide Screens */
+/*@media only screen and (min-width : 1200px) {
+
+}*/
+
+
+/*---------------------------------------
+   SECTION:  WHY ATLETO
+-----------------------------------------*/
+.why-atleto {
+  background: url(../images/bg-3.jpg) no-repeat center fixed;
+  background-size: cover;    
+  padding-bottom: 70px;
+}
+
+.why-atleto h2 {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.why-atleto ul {
+  padding: 20px;
+}
+
+.why-atleto ul li {
+  padding: 15px;
+}
+
 
 /*---------------------------------------
    SECTION:  SIGNUP
